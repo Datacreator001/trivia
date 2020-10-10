@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script defer src="script.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		<title>That Spectacular Trivia Game</title>
+	</head>
+	<body>
+        <div class="display-board"></div>
+        
+        
+        
+        <div class="Board-Of-Questions">
+			<div id="questions"    data-info="No-Show">
+                <div id="question">Question</div>
+                <div id="questionButtons"  class="style">
+                    <button class="button">Answer One</button>
+                    <button class="button">Answer Two</button>
+                    <button class="button">Answer Three</button>
+                </div>
+            </div>
+			<div class="buttons">
+				<button class="Start" data-info="Start">Let's Get Started</button>
+				<button class="Next" data-info="Next">Next</button>
+			</div>
+		</div>
+	</body>
 </html>
