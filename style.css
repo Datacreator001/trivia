@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
 
 :root {
-    background-color: rgb(207, 126, 3);
+    background-color: rgb(255, 187, 0);
 }
-
+/* most of my styling is from brian's design with a hint of my own style */
 *{
     box-sizing: border-box;
     margin: 0;
@@ -12,16 +12,22 @@
     font-family: "Gloria Hallelujah", cursive;
 }
 h1{
-    font-size: 5.4rem;
-    color: #fff;
+    font-size: 7.4rem;
+    color: black;
     margin-bottom: 5rem;
     justify-content: center;
     align-items: center;
+    
+}
+h1:hover{
+    cursor: pointer;
+    color: rgba(252, 5, 5, 0.856);
 }
 h2{
    font-size: 4.2rem; 
    margin-bottom: 4rem;
 }
+/*from here... this is from brian design with a lil touch of my own colors*/
 .container{
     width:100vw;
     height:100vh;
@@ -32,8 +38,7 @@ h2{
     margin: 0 auto;
     padding: 2rem;
 }
-
-.flex-column{
+.flex-column{                           
     display: flex;
     flex-direction: column;
 }
@@ -61,14 +66,17 @@ h2{
     justify-content: center;
     align-items: center;
     margin:0 auto  ;
+    border-radius: 2rem;
 }
-
+/*  to here */
 .fas{
     font-size: 3rem;
 }
 
-.fas:hover{
-    color: rgb(207, 126, 3);
+.btn:hover{
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(14, 177, 14, 0.856);
+    color: rgba(14, 177, 14, 0.856);
 }
 #highscore-btn{
     margin: 2rem;
