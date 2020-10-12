@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+
+
+:root{
+    background-color:  rgb(255, 187, 0);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 60.5%;
+    font-family: "Gloria Hallelujah", cursive;
+}
