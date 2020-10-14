@@ -5,7 +5,9 @@ playerChoices.forEach((choice) =>
 	choice.addEventListener('click', checkanswer)
 );
 const questionNumber = document.querySelector('.hud-prefix');
-console.log(questionNumber);
+const endOfGame = 'End of Game';
+const uWin = 'U Win';
+const uLose = 'U Lose';
 let questions = [
 	{
 		question: 'How much did Americans spend on Halloween in 2019?',
@@ -81,33 +83,37 @@ let questions = [
 ];
 
 let currentQuestion = 0;
+const maxQuestions=8
 
 function askQuestion() {
 	question.innerText = questions[currentQuestion].question;
 	playerChoices[0].innerText = questions[currentQuestion].choice1;
 	playerChoices[1].innerText = questions[currentQuestion].choice2;
-	playerChoices[2].innerText = questions[currentQuestion].choice3;
+    playerChoices[2].innerText = questions[currentQuestion].choice3;
+    allTheQuestions= [...questions]
 }
 
 function checkanswer(e) {
-	if (e.target.innerText === questions[currentQuestion].answer) {
-		score.innerText = Number(score.innerText) + 1;
-		currentQuestion = currentQuestion + 1;
-		questionNumber.innerText = Number(questionNumber.innerText) + 1;
-		askQuestion();
-	} else if (e.target.innerText !== questions[currentQuestion].answer) {
-        score.innerText = Number(score.innerText) - 1;
-        const selectedChoice= e.target
-        const selectedAnswer= selectedChoice.innerText
-        let classToApply = selectedAnswer==currentQuestion.answer ? 'correct' :
-        'incorrect'
-        selectedChoice.parentElement.classList.add(classToApply)
-        setTimeout(()=>{
-            selectedChoice.parentElement.classList.remove(classToApply)
-            askQuestion()
-        },1000)
-	} 
+       
+    if (e.target.innerText === questions[currentQuestion].answer) {
+		score.innerText = Number(score.innerText)+1;
+		currentQuestion = currentQuestion+1;
+        questionNumber.innerText = Number(questionNumber.innerText) + 1;
+        if (allTheQuestions.length===0||currentQuestion>maxQuestions) {
+    return window.location.assign('/Win.html')}
+        askQuestion();}
+     else if (e.target.innerText !== questions[currentQuestion].answer) {
+		score.innerText = Number(score.innerText) - 1;
+		const selectedChoice = e.target;
+		const selectedAnswer = selectedChoice.innerText;
+		let answerChecker =
+			selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect';
+		selectedChoice.parentElement.classList.add(answerChecker);
+		setTimeout(() => {
+			selectedChoice.parentElement.classList.remove(answerChecker);
+			askQuestion();
+		}, 1000);
+	}
 
 }
-
 askQuestion();
