@@ -100,7 +100,7 @@ function checkanswer(e) {
 		currentQuestion = currentQuestion+1;
         questionNumber.innerText = Number(questionNumber.innerText) + 1;
         if (allTheQuestions.length===0||currentQuestion>maxQuestions) {
-    return window.location.assign('/Win.html')}
+    return window.location.assign('Win.html')}
         askQuestion();}
      else if (e.target.innerText !== questions[currentQuestion].answer) {
 		score.innerText = Number(score.innerText) - 1;
