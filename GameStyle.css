@@ -30,7 +30,7 @@
     background: linear-gradient(20deg, rgba(14, 177, 14, 0.795)0%,rgb(41,232,111)100%);
 }
 .incorrect{
-    background: linear-gradient(20deg, rgb(216, 13, 13)0%,rgb(230, 27, 27)100%);
+    background: linear-gradient(20deg, rgb(255, 166, 0)0%,rgb(230, 27, 27)100%);
 }
 #hud{
     display: flex;
@@ -49,6 +49,9 @@
 }
 .choice{
     flex-grow: 1;
+}
+.questionSign{
+    font-size: 2rem;
 }
 @media(max-width:800px){
     .choice-container{
