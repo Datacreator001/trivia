@@ -13,3 +13,5 @@ Didnt figure out how to make wrong answers not give negative points
 major hurdles:
 My major hurdles was getting through the Javascript!!
 
+![Trivia](https://user-images.githubusercontent.com/69952752/95993574-46c2f180-0dfd-11eb-96c2-ba5197536487.jpg)
+![Sppoky Trivia](https://media.git.generalassemb.ly/user/31364/files/a40b7280-0dfe-11eb-8ffe-ada300673a01)
